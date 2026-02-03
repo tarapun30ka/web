@@ -1,0 +1,1 @@
+<p><strong><?= htmlspecialchars($data['key']) ?>:</strong> <?= htmlspecialchars($data['value']) ?></p>

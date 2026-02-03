@@ -1,0 +1,24 @@
+@startuml class-diagram
+  interface "INewsDB\n<b>Interface INewsDB</b>" as INewsDB {
+    +saveNews(title, category, description, source)
+    +getNews()
+    +deleteNews(id)
+  }
+  class "NewsDB" as NewsDB {
+    -items : array
+    -_db :
+    +__construct()
+    +__destruct()
+    -getCategories()
+    +getIterator()
+    #getDb()
+    +saveNews(title, category, description, source)
+    +getNews()
+    +deleteNews(id)
+  }
+class IteratorAggregate {
+     +getIterator(): Iterator
+}
+NewsDB ..|> IteratorAggregate
+NewsDB ..|> INewsDB
+@enduml

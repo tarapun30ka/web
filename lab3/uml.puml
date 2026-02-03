@@ -1,0 +1,17 @@
+@startuml class-diagram
+  interface "INewsDB\n<b>inerface INewsDB</b>" as INewsDB {
+    +saveNews(title, category, description, source)
+    +getNews()
+    +deleteNews(id)
+  }
+  class "NewsDB" as NewsDB {
+    -_db :
+    +__construct()
+    +__destruct()
+    #getDb()
+    +saveNews(title, category, description, source)
+    +getNews()
+    +deleteNews(id)
+  }
+  INewsDB <|-- NewsDB
+@enduml

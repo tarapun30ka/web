@@ -1,0 +1,23 @@
+@startuml class-diagram
+  class "NumbersSquared" as NumbersSquared {
+    -start : int
+    -end : int
+    -current : int
+    +__construct(start, end)
+    +rewind()
+    +valid()
+    +next()
+    +key()
+    +current()
+  }
+
+interface Iterator {
+    + rewind() : void
+    + valid() : bool
+    + next() : void
+    + key() : mixed
+    + current() : mixed
+}
+
+NumbersSquared ..|> Iterator
+@enduml

@@ -1,0 +1,30 @@
+@startuml class-diagram
+   abstract class "AbstractUser\n<b>Абстрактный базовый класс для всех пользователей.</b>" as AbstractUser {
+    {abstract} +showInfo() : string
+  }
+  class "SuperUser\n<b>Класс суперпользователя, наследуется от User и реализует SuperUserInterface.</b>" as SuperUser {
+    +role : string
+    +superUserCount : {static} int = 0
+    +__construct(name, login, password, role)
+    +showInfo() : string
+    +getInfo() : array
+  }
+  interface "SuperUserInterface\n<b>Интерфейс для суперпользователей.</b>" as SuperUserInterface {
+    +getInfo() : array
+  }
+  class "User\n<b>Класс обычного пользователя.</b>" as User {
+    +name : string
+    +login : string
+    -password : string
+    +userCount : {static} int = 0
+    +__construct(name, login, password)
+    +showInfo() : string
+    +__destruct()
+    +getPassword()
+  }
+  AbstractUser <|-- User
+  User <|-- SuperUser
+  SuperUser ..|> SuperUserInterface
+  ' SuperUserInterface <|-- SuperUser
+  ' User <|-- SuperUser
+@enduml

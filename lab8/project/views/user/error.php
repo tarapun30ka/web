@@ -1,0 +1,1 @@
+<p style="color: #c00;"><?= htmlspecialchars($data['message']) ?></p>

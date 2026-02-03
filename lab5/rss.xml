@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Последние новости</title>
+    <link>http://f1172313.xsph.ru/news/news.php</link>
+    <item>
+      <title>выаываыва</title>
+      <link>http://f1172313.xsph.ru/news/news.php?id=9</link>
+      <description><![CDATA[выаыв]]></description>
+      <pubDate>Fri, 24 Oct 2025 12:51:09 +0300</pubDate>
+      <category>Политика</category>
+    </item>
+    <item>
+      <title>dfdsf</title>
+      <link>http://f1172313.xsph.ru/news/news.php?id=7</link>
+      <description><![CDATA[dsfasd]]></description>
+      <pubDate>Thu, 23 Oct 2025 19:27:03 +0300</pubDate>
+      <category>Политика</category>
+    </item>
+  </channel>
+</rss>
